@@ -1,0 +1,72 @@
+/* src/styles/layout.module.css */
+
+.layout {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 100vh; /* Ensures the layout covers the viewport */
+    overflow: hidden;
+    padding-top: 80px; /* Adjust based on navbar height */
+}
+
+.main {
+    flex: 1;
+    background-color: var(--background);
+    padding: 2rem;
+    position: relative;
+}
+
+.main::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    pointer-events: none; /* Prevents blocking interactions */
+}
+
+.aside {
+    width: var(--sidebarWidth);
+    border-left: 1px solid var(--borderColor);
+    overflow-y: auto;
+}
+
+.asideContent {
+    padding: 24px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .aside {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid var(--borderColor);
+    }
+}
+
+@media (max-width: 480px) {
+    .layout {
+        padding-top: 80px; /* Adjust based on navbar height for mobile */
+    }
+
+    .main {
+        background-size: 600px;
+        background-position: var(--contentPadding) var(--contentPadding);
+    }
+
+    .title {
+        font-size: 14px;
+        padding: 12px 18px;
+    }
+
+    .asideContent {
+        padding: 16px;
+    }
+}

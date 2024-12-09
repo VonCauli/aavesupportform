@@ -1,0 +1,191 @@
+/* src/styles/header.module.css */
+
+/* src/styles/header.module.css */
+
+.header {
+  position: fixed; /* Fixes the header relative to the viewport */
+  top: 0;          /* Positions the header at the top */
+  left: 5%;         /* Aligns the header to the left */
+  width: 90%;  
+  height: 50px;   /* Makes the header span the full width */
+  background-color: var(--bg-1); /* Ensures background is solid */
+  padding: 0.1rem 0.00001rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+  z-index: 1000;   /* Ensures the header stays above other elements */
+}
+
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.logoContainer {
+  position: relative;
+  width: 100px;
+  height: 50px;
+}
+
+.logo {
+  /* Styles handled via Image props */
+}
+
+.siteTitle {
+  flex: 1; /* Allow siteTitle to take up remaining space */
+  text-align: center;
+  margin-left: 300px; /* Center the text horizontally */
+  font-size: 1.25rem; /* Adjust as needed */
+  font-weight: 700; /* Bold text */
+  color: var(--fg-1); /* Consistent text color */
+}
+
+.navMenu {
+  display: flex;
+  gap: 2rem;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navButton {
+  background: none;
+  border: none;
+  color: var(--fg-1);
+  margin-top: 9px;
+  text-decoration: none;
+  font-weight: 533;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.navButton:hover,
+.navButton:focus {
+  color: var(--focus);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--bg-2);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 150px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.navItem:hover .dropdownMenu,
+.navItem:focus-within .dropdownMenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdownLink {
+  display: block;
+  padding: 0.5rem 0;
+  color: var(--fg-1);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.dropdownLink:hover,
+.dropdownLink:focus {
+  color: var(--focus);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .logoContainer {
+    width: 120px;
+    height: 60px;
+  }
+
+  .siteTitle {
+    font-size: 1.25rem;
+  }
+
+  .navMenu {
+    gap: 1.5rem;
+  }
+
+  .dropdownMenu {
+    padding: 0.8rem;
+    min-width: 130px;
+  }
+
+  .dropdownLink {
+    padding: 0.4rem 0;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoContainer {
+    width: 100px;
+    height: 50px;
+  }
+
+  .siteTitle {
+    font-size: 1rem;
+  }
+
+  .navMenu {
+    gap: 1rem;
+  }
+
+  .dropdownMenu {
+    padding: 0.6rem;
+    min-width: 120px;
+  }
+
+  .dropdownLink {
+    padding: 0.3rem 0;
+    font-size: 0.85rem;
+  }
+}
+
+.openAppButton {
+  background-color: rgb(28, 28, 28);
+  color: white;
+  padding: 0.4rem 0.9rem;
+  border-radius: 9999px; /* Fully rounded */
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.openAppButton:hover,
+.openAppButton:focus {
+  background-color: #333333; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/*Adjusts spacing for the new button in different screen sizes */
+
+@media (max-width: 768px) {
+  .openAppButton {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .openAppButton {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+  }
+}
