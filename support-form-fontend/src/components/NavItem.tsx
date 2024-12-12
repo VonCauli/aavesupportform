@@ -1,4 +1,3 @@
-// src/components/NavItem.tsx
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import styles from '../styles/header.module.css';
