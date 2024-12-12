@@ -144,13 +144,10 @@ const SupportForm: React.FC = () => {
       return;
     }
 
-    // Here you can handle the attachments, e.g.:
-    // 1. Upload them to a storage service.
-    // 2. Convert to base64 (not recommended for large files) and send through GraphQL.
-    // For now, we just log them.
+    // Logging Attachments
     if (attachments && attachments.length > 0) {
       console.log('Files selected:', attachments);
-      // Implement your upload logic here
+      // Implement upload logic here
     }
 
     // Log the form state
