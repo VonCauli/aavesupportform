@@ -1,5 +1,3 @@
-# graphql/schema.graphql
-
 scalar Upload
 
 type Query {
