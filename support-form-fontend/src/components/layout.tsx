@@ -1,4 +1,3 @@
-// src/components/Layout.tsx
 import styles from './layout.module.css';
 import Header from './Header';
 
