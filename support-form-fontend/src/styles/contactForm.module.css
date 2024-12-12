@@ -1,5 +1,3 @@
-/* styles/contactForm.module.css */
-
 .fieldWithSpace {
   margin-top: 75px;
 }
@@ -236,8 +234,6 @@
       margin-bottom: 0.5rem;
     }
   }
-  
-/* contactForm.module.css */
 
 /* Keyframes for Fade-In Animation */
 @keyframes fadeIn {
