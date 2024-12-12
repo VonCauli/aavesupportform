@@ -1,0 +1,27 @@
+.textarea {
+    box-shadow: var(--inputBoxShadow);
+    color: var(--textColor);
+    background: var(--inputBackground);
+    border-radius: 8px;
+    padding: 8px 16px;
+    outline: none;
+    border: none;
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    line-height: 24px;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.textarea::placeholder {
+    color: var(--textColorMuted);
+}
+
+.textarea:hover {
+    box-shadow: var(--inputBoxShadowHover);
+}
+
+.textarea:focus {
+    box-shadow: var(--inputBoxShadowFocus);
+}

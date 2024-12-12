@@ -1,0 +1,38 @@
+/* globals.css */
+
+/* Import the Inter font used by Aave */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Root variables based on Aave's theme */
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  --bg-1: #fff;
+  --bg-2: #fff;
+  --bg-3: #fafaf9;
+  --bg-4: #f7f6f6;
+  --border-1: #f1f1f0;
+  --border-2: #e1e1e0;
+  --fg-1: #211d1d;
+  --fg-2: #636161;
+  --fg-3: #8f8e8e;
+  --fg-4: #bcbbbb;
+  --purple-1: #9898ff;
+  --purple-2: #bcbbff;
+  --purple-3: #e5e5ff;
+  --purple-4: #faf9ff;
+  --blue-1: #1c4886;
+  --blue-2: #5d7eaa;
+  --blue-3: #e0eaf2;
+  --blue-4: #f6fcfe;
+  --gho-1: #28d358;
+  --focus: #9898ff;
+}
+
+/* Global Styles (if any) */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-1);
+  color: var(--fg-1);
+  margin: 0;
+  padding: 0;
+}

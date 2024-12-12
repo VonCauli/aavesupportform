@@ -1,0 +1,34 @@
+# graphql/schema.graphql
+
+scalar Upload
+
+type Query {
+  _empty: String
+  hello: String
+}
+
+type Mutation {
+  uploadSupportRequest(input: SupportRequestInput!): UploadResponse!
+}
+
+input SupportRequestInput {
+  name: String!
+  email: String!
+  typeOfIssue: String!
+  walletServiceProvider: String
+  transactionHash: String
+  integrationDetails: String
+  walletAddress: String
+  tokenInvolved: String
+  marketInvolved: String
+  functionInvolved: String
+  errorCode: String
+  otherDetails: String
+  mobileOrDesktop: String
+  files: [Upload!]
+}
+
+type UploadResponse {
+  success: Boolean!
+  message: String
+}

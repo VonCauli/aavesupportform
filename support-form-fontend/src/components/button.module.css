@@ -1,0 +1,55 @@
+.button {
+    padding: 8px 16px;
+    font-weight: 500;
+    background: #4747eb;
+    color: var(--textColor);
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    display: block;
+    max-width: 180px;
+    line-height: 24px;
+    transition: background 150ms linear;
+    position: relative;
+}
+
+.button:not(:disabled) {
+    cursor: pointer;
+}
+
+.button:hover:not(:disabled) {
+    background: #5050f0;
+}
+
+.button:disabled {
+    background: #cdccda1f;
+    color: #7f7e80;
+}
+
+
+.spinner {
+    --size: 18px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: var(--size);
+    height: var(--size);
+    border: 2px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+    70% {
+        transform: translate3d(-50%, -50%, 0) rotate(200deg);
+    }
+    100% {
+        transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    }
+} 
