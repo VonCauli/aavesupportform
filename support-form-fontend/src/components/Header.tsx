@@ -1,9 +1,8 @@
-// src/components/Header.tsx
 import React from 'react';
 import NavItem from './NavItem';
 import styles from '../styles/header.module.css';
 import Image from 'next/image';
-import Link from 'next/link'; // Ensure Link is imported
+import Link from 'next/link'; 
 
 const Header: React.FC = () => {
   const navItems = [
