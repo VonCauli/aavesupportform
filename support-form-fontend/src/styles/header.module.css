@@ -1,18 +1,13 @@
-/* src/styles/header.module.css */
-
-/* src/styles/header.module.css */
-
 .header {
-  position: fixed; /* Fixes the header relative to the viewport */
-  top: 0;          /* Positions the header at the top */
-  left: 5%;         /* Aligns the header to the left */
+  position: fixed; 
+  top: 0;          
+  left: 5%;         
   width: 90%;  
-  height: 50px;   /* Makes the header span the full width */
-  background-color: var(--bg-1); /* Ensures background is solid */
+  height: 50px;   
+  background-color: var(--bg-1);
   padding: 0.1rem 0.00001rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
-  z-index: 1000;   /* Ensures the header stays above other elements */
-}
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  z-index: 1000;   
 
 
 .navContainer {
@@ -34,12 +29,12 @@
 }
 
 .siteTitle {
-  flex: 1; /* Allow siteTitle to take up remaining space */
+  flex: 1; 
   text-align: center;
-  margin-left: 300px; /* Center the text horizontally */
-  font-size: 1.25rem; /* Adjust as needed */
-  font-weight: 700; /* Bold text */
-  color: var(--fg-1); /* Consistent text color */
+  margin-left: 300px; 
+  font-size: 1.25rem; 
+  font-weight: 700; 
+  color: var(--fg-1); 
 }
 
 .navMenu {
@@ -103,7 +98,6 @@
   color: var(--focus);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .logoContainer {
     width: 120px;
@@ -158,7 +152,7 @@
   background-color: rgb(28, 28, 28);
   color: white;
   padding: 0.4rem 0.9rem;
-  border-radius: 9999px; /* Fully rounded */
+  border-radius: 9999px; 
   text-decoration: none;
   font-weight: 600;
   cursor: pointer;
@@ -170,8 +164,8 @@
 
 .openAppButton:hover,
 .openAppButton:focus {
-  background-color: #333333; /* Darker shade on hover */
-  transform: translateY(-2px); /* Slight lift on hover */
+  background-color: #333333; 
+  transform: translateY(-2px); 
 }
 
 /*Adjusts spacing for the new button in different screen sizes */
